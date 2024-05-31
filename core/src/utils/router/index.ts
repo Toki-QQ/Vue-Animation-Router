@@ -6,8 +6,12 @@ import type { RouterOptions, Router } from "vue-router";
 /**
  * 创建代理路由
  * create router proxy
+ *
  * @param routerOptions 路由配置项
  * @param routerOptions router options
+ *
+ * @return Router 代理路由
+ * @return Router proxy router
  */
 const createAnimationRouter = (routerOptions: RouterOptions): Router => {
   // 获取原始路由表

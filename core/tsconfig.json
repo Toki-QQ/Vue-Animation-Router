@@ -4,6 +4,8 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "allowJs": true,
     "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -15,6 +17,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "types": ["vite/client", "vue", "vue/jsx", "vue-router", "mitt"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [

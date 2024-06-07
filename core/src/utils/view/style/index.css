@@ -1,0 +1,61 @@
+/**
+ * 路由动画视图容器
+ * animation router view container
+ */
+.--VAR-animation-router-view-container {
+  position: relative;
+}
+
+/**
+ * 路由返回操作，视图进入动画
+ * the router view enter animation of router back operation
+ */
+.--VAR-back-enter-active {
+  animation: var(--back-enter-animation) var(--back-enter-animation-reverse);
+  animation-duration: var(--back-enter-animation-duration);
+  animation-timing-function: var(--back-enter-animation-timing-function);
+  animation-delay: var(--back-enter-animation-delay);
+  transform-origin: var(--back-animation-transform-origin);
+  position: var(--back-enter-animation-position);
+}
+
+/**
+   * 路由返回操作，视图离开动画
+   * the router view leave animation of router back operation,
+   */
+.--VAR-back-leave-active {
+  animation: var(--back-leave-animation) var(--back-leave-animation-reverse);
+  animation-duration: var(--back-leave-animation-duration);
+  animation-timing-function: var(--back-leave-animation-timing-function);
+  animation-delay: var(--back-leave-animation-delay);
+  transform-origin: var(--back-animation-transform-origin);
+  position: var(--back-leave-animation-position);
+}
+
+/**
+   * 路由前进操作，视图进入动画
+   * the router view enter animation of router forward operation,
+   */
+.--VAR-forward-enter-active {
+  animation: var(--forward-enter-animation)
+    var(--forward-enter-animation-reverse);
+  animation-duration: var(--forward-enter-animation-duration);
+  animation-timing-function: var(--forward-enter-animation-timing-function);
+  animation-delay: var(--forward-enter-animation-delay);
+  transform-origin: var(--forward-animation-transform-origin);
+  position: var(--forward-enter-animation-position);
+}
+
+/**
+   * 路由前进操作，视图离开动画
+   * the router view leave animation of router forward operation,
+   */
+.--VAR-forward-leave-active {
+  animation: var(--forward-leave-animation)
+    var(--forward-leave-animation-reverse);
+  animation-duration: var(--forward-leave-animation-duration);
+  animation-timing-function: var(--forward-leave-animation-timing-function);
+  animation-delay: var(--forward-leave-animation-delay);
+  transform-origin: var(--forward-animation-transform-origin);
+  position: var(--forward-leave-animation-position);
+}

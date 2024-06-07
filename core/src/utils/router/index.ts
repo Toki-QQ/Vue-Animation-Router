@@ -1,5 +1,5 @@
 import { createRouter } from "vue-router";
-import { RouterEvents, eventBus } from "src/utils/event_bus";
+import { RouterEvents, eventBus } from "../event_bus";
 
 import type { RouterOptions, Router } from "vue-router";
 
@@ -43,6 +43,9 @@ const createAnimationRouter = (routerOptions: RouterOptions): Router => {
       return target[key];
     },
   };
+
+  // 监听浏览器前进和后退按钮
+  // handlers of browser's back and forward events
 
   // 通过proxy代理源router
   // proxy raw router

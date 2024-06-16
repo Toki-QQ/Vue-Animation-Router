@@ -2,7 +2,7 @@
  * 动画路由视图配置
  * animation router view options
  */
-declare interface AnimationRouterViewOptions {
+export interface AnimationRouterViewOptions {
   // 是否保活
   // is keeping alive
   keepAlive: boolean;

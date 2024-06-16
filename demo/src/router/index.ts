@@ -1,6 +1,6 @@
 import type { RouteRecordRaw } from "vue-router";
 import { createRouter, createWebHistory } from "vue-router";
-import { createAnimationRouter } from "vue-animation-router";
+import { createAnimationRouter } from "vue-animation-router/es";
 
 const routes: Array<RouteRecordRaw> = [
   {

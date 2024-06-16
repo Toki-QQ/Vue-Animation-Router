@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import { createHead } from "@vueuse/head";
 import { router } from "@/router";
 import { createPinia } from "pinia";
+// import VueAnimationRouter from "vue-animation-router";
 
 //代替v-html
 import VueDOMPurifyHTML from "vue-dompurify-html";
@@ -17,4 +18,5 @@ app.use(head);
 app.use(router);
 app.use(pinia);
 app.use(VueDOMPurifyHTML);
+// app.use(VueAnimationRouter);
 app.mount("#app");

@@ -1,5 +1,5 @@
 import type { ComponentObjectPropsOptions, ComponentPropsOptions } from "vue";
-import type { AnimationRouterViewProps } from "src/types";
+import type { AnimationRouterViewProps } from "@/types";
 
 // 动画路由视图默认属性
 // default props of animation router view

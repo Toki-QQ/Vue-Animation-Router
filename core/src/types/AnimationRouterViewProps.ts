@@ -1,5 +1,6 @@
 import type { BaseTransitionProps, KeepAliveProps } from "vue";
 import type { RouterViewProps } from "vue-router";
+import type { AnimationRouterViewOptions } from "./AnimationRouterViewOptions";
 
 /**
  * 动画路由视图属性

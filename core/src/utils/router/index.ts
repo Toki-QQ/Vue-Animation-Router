@@ -1,5 +1,5 @@
 import { createRouter } from "vue-router";
-import { RouterEvents, eventBus } from "../event_bus";
+import { RouterEvents, eventBus } from "@/utils/event_bus";
 
 import type { RouterOptions, Router } from "vue-router";
 

@@ -1,9 +1,9 @@
-import { withInstall } from "../../utils/view";
+import { withInstall } from "@/utils/view";
 
-import { BaseRouterView } from "./BaseRouterView";
+import __BaseRouterView from "./BaseRouterView";
 
 // 注册BaseRouterView组件
 // install BaseRouterView
-withInstall(BaseRouterView);
+const BaseRouterView = withInstall(__BaseRouterView);
 
 export default BaseRouterView;

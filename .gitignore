@@ -11,8 +11,14 @@ lerna-debug.log*
 site/.vitepress/dist
 site/.vitepress/cache
 
-# dist
-*/dist/
+# Core dist
+core/lib
+core/es
+core/dist
+
+# Demo
+demo/dist
+
 
 # pnpm
 pnpm-lock.yaml

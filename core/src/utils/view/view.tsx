@@ -1,7 +1,7 @@
 import { defineComponent, Transition, KeepAlive, ref } from "vue";
 import { RouterView } from "vue-router";
 
-import { eventBus, RouterEvents } from "../event_bus";
+import { eventBus, RouterEvents } from "@/utils/event_bus";
 import { createProps } from "./props";
 
 import type {
@@ -9,7 +9,7 @@ import type {
   ComponentOptionsWithObjectProps,
   VNode,
 } from "vue";
-import type { AnimationRouterViewProps } from "src/types";
+import type { AnimationRouterViewProps } from "@/types";
 
 // 引入CSS
 // import css

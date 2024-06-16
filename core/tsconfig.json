@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "strict": true,
     "jsx": "preserve",
     "jsxImportSource": "vue",
@@ -17,7 +17,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vite/client", "vue", "vue/jsx", "vue-router", "mitt"],
+    "types": ["vite/client", "vue", "vue/jsx", "vue-router", "mitt", "node"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [

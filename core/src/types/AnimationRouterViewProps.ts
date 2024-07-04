@@ -10,7 +10,5 @@ export type AnimationRouterViewProps = Partial<
   AnimationRouterViewOptions &
     RouterViewProps &
     KeepAliveProps &
-    Pick<BaseTransitionProps, "mode" | "appear" | "persisted"> & {
-      [key: string]: unknown;
-    }
+    Pick<BaseTransitionProps, "mode" | "appear" | "persisted">
 >;

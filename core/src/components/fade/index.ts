@@ -1,9 +1,10 @@
-import { withInstall } from "@/utils/view";
+import { withInstall } from "@/utils/view/component";
 
-import __FadeRouterView from "./FadeRouterView";
+import { FadeRouterView } from "./FadeRouterView";
 
 // 注册FadeRouterView组件
 // install FadeRouterView
-const FadeRouterView = withInstall(__FadeRouterView);
+export const VarFadeRouterView = withInstall(FadeRouterView);
 
-export default FadeRouterView;
+export default VarFadeRouterView;
+export * from "./FadeRouterView";

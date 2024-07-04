@@ -7,9 +7,12 @@
 
 <script setup lang="ts">
 const router = useRouter();
+const route = useRoute();
 
 function navToDemo1() {
   router.back();
+
+  // console.log(route);
 }
 </script>
 

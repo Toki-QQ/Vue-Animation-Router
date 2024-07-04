@@ -1,15 +1,17 @@
-import type { App, DefineComponent } from "vue";
+import type { App, Plugin } from "vue";
 
-import type { SFCWithInstall } from "@/types";
+import type { AnimationRouterView } from "@/types";
 
 /**
  * 注册组件
  * install component
  */
-export const withInstall = <T>(component: DefineComponent<T>) => {
-  (component as SFCWithInstall<T>).install = (app: App) => {
+export const withInstall = (
+  component: AnimationRouterView,
+): AnimationRouterView & Plugin => {
+  (component as AnimationRouterView & Plugin).install = (app: App) => {
     app.component(component.name as any, component);
   };
 
-  return component as SFCWithInstall<T>;
+  return component as AnimationRouterView & Plugin;
 };

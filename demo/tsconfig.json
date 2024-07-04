@@ -13,19 +13,16 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "vite/client"
+      "vite/client",
+      "vue",
+      "vue-router",
+      "node",
+      "vue-animation-router/es"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
     "src/*.ts",
@@ -36,9 +33,5 @@
     "tests/**/*.tsx",
     "components.d.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.js"
-  ]
+  "exclude": ["node_modules", "dist", "**/*.js"]
 }

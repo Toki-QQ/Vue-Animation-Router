@@ -7,8 +7,8 @@ import FadeRouterViewClass from "./FadeRouterView.module.css";
 // 创建淡化动画路由
 // define fade router view
 const FadeRouterView = defineAnimationRouterView({
-  name: "fade-router-view",
+  name: "FadeRouterView",
   componentClass: FadeRouterViewClass,
 });
 
-export default FadeRouterView;
+export { FadeRouterView };

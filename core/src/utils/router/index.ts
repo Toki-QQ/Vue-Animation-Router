@@ -3,6 +3,10 @@ import { RouterEvents, eventBus } from "@/utils/event_bus";
 
 import type { RouterOptions, Router } from "vue-router";
 
+// 当前路由状态未知
+// current route state position
+let currentRouteStatePosition: number;
+
 /**
  * 创建代理路由
  * create router proxy
@@ -14,6 +18,10 @@ import type { RouterOptions, Router } from "vue-router";
  * @return Router proxy router
  */
 const createAnimationRouter = (routerOptions: RouterOptions): Router => {
+  // 初始化路由状态
+  // init router state
+  currentRouteStatePosition = 0;
+
   // 获取原始路由表
   // get raw routes
   const rawRoute = routerOptions.routes;
@@ -30,19 +38,61 @@ const createAnimationRouter = (routerOptions: RouterOptions): Router => {
       switch (key) {
         case "back":
           eventBus.emit(RouterEvents.ROUTER_BACK);
+
+          if (currentRouteStatePosition > 0) {
+            currentRouteStatePosition--;
+          }
           break;
         case "push":
           eventBus.emit(RouterEvents.ROUTER_PUSH);
+
+          currentRouteStatePosition++;
           break;
         case "replace":
           eventBus.emit(RouterEvents.ROUTER_REPLACE);
+
+          currentRouteStatePosition = 0;
+          break;
         case "forward":
           eventBus.emit(RouterEvents.ROUTER_FORWARD);
+
+          currentRouteStatePosition++;
+          break;
       }
 
       return target[key];
     },
   };
+
+  const popstateHandler = (event: PopStateEvent) => {
+    if (
+      event.state &&
+      event.state.position &&
+      typeof event.state.position === "number"
+    ) {
+      // 监听浏览器后退操作
+      // handlers of browser's back opreation
+      if (event.state.position < currentRouteStatePosition) {
+        console.log("back");
+        eventBus.emit(RouterEvents.ROUTER_BACK);
+      }
+
+      // 监听浏览器前进操作
+      // handlers of browser's forward opreation
+      if (event.state.position > currentRouteStatePosition) {
+        console.log("forward");
+        eventBus.emit(RouterEvents.ROUTER_FORWARD);
+      }
+
+      currentRouteStatePosition = event.state.position as number;
+    }
+  };
+
+  // 监听浏览器后退和前进操作
+  // handlers of browser's back and forward opreation
+  window.addEventListener("popstate", popstateHandler, {
+    capture: true,
+  });
 
   // 监听浏览器前进和后退按钮
   // handlers of browser's back and forward events

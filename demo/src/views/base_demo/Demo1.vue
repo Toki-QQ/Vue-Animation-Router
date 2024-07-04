@@ -7,11 +7,14 @@
 
 <script setup lang="ts">
 const router = useRouter();
+const route = useRoute();
 
 function navToDemo2() {
   router.push({
     name: "BaseDemo2",
   });
+
+  // console.log(route);
 }
 </script>
 

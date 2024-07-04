@@ -1,3 +1,3 @@
-export { default as BaseRouterView } from "./base";
-export { default as FadeRouterView } from "./fade";
-export { default as FadeSlideRouterView } from "./fade_slide";
+export * from "./base";
+export * from "./fade";
+export * from "./fade_slide";

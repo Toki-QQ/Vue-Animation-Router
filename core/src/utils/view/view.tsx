@@ -5,10 +5,7 @@ import {
   ref,
   toRef,
   watchEffect,
-<<<<<<< HEAD
   onUnmounted,
-=======
->>>>>>> d3fcea6bfff910601916fc47db74997b06635037
 } from "vue";
 import { RouterView } from "vue-router";
 
@@ -77,18 +74,13 @@ export const defineAnimationRouterView = (
     ],
     setup(props: AnimationRouterViewProps, { emit }) {
       let animationConfig = toRef(props.animation); // 动画路由视图属性 animation router view props
-<<<<<<< HEAD
       const animationName = ref<string>(FORWARD_ANIMATION_NAME); // 动画名称 animation name
-=======
-      const animationName = ref<string | undefined>(undefined); // 动画名称 animation name
->>>>>>> d3fcea6bfff910601916fc47db74997b06635037
 
       // 监听动画路由视图属性变化
       // watching animation router view props change
       watchEffect(() => {
         animationConfig = toRef(props.animation);
       });
-<<<<<<< HEAD
 
       let animationStepCount = 0; // 动画进度 animation progress
       let progressInterval: NodeJS.Timeout | undefined = undefined; // 动画进度定时器 animation progress timer
@@ -147,8 +139,6 @@ export const defineAnimationRouterView = (
           active,
         });
       };
-=======
->>>>>>> d3fcea6bfff910601916fc47db74997b06635037
 
       // 监听路由返回事件
       // listening router back event
@@ -173,7 +163,6 @@ export const defineAnimationRouterView = (
         console.log("event forward");
       });
 
-<<<<<<< HEAD
       // 组件卸载时，移除监听
       // when component unmounted, remove the event listener
       onUnmounted(() => {
@@ -182,65 +171,6 @@ export const defineAnimationRouterView = (
         eventBus.off(RouterEvents.ROUTER_PUSH);
         eventBus.off(RouterEvents.ROUTER_FORWARD);
       });
-=======
-      let animationStepCount = 0; // 动画进度 animation progress
-      let progressInterval: NodeJS.Timeout | undefined = undefined; // 动画进度定时器 animation progress timer
-
-      // 触发动画开始事件，准备动画进度所需数据
-      // trigger the animation start emit, prepare the progress data
-      const prepareProgressInterval = (
-        active: "enter" | "leave" | "appear",
-      ) => {
-        if (animationStepCount != 0) {
-          animationStepCount = 0;
-          clearInterval(progressInterval);
-        }
-
-        emit("onStart", {
-          operation:
-            animationName.value === BACK_ANIMATION_NAME ? "back" : "forward",
-          active,
-        });
-      };
-
-      // 开始触发动画进度事件
-      // trigger the animation progress emit
-      const startProgressInterval = (active: "enter" | "leave" | "appear") => {
-        if (animationStepCount != 0) {
-          animationStepCount = 0;
-          clearInterval(progressInterval);
-        }
-
-        progressInterval = setInterval(
-          () => {
-            animationStepCount +=
-              props.animationProgressStep ?? ANIMATION_PROGRESS_STEP;
-
-            emit("onProgress", {
-              operation:
-                animationName.value === BACK_ANIMATION_NAME
-                  ? "back"
-                  : "forward",
-              active,
-              progress: animationStepCount.toFixed(3),
-            });
-          },
-          (props.animationProgressStep ?? ANIMATION_PROGRESS_STEP) * 1000,
-        );
-      };
-
-      // 结束触发动画结束事件，清除动画进度定时器
-      // trigger the animation finish emit, clear animation progress timer
-      const clearProgressInterval = (active: "enter" | "leave" | "appear") => {
-        clearInterval(progressInterval);
-
-        emit("onFinish", {
-          operation:
-            animationName.value === BACK_ANIMATION_NAME ? "back" : "forward",
-          active,
-        });
-      };
->>>>>>> d3fcea6bfff910601916fc47db74997b06635037
 
       // 渲染动画路由视图方法
       // animation router view render method

@@ -5,6 +5,7 @@ declare module "@vue/runtime-core" {
     VarBaseRouterView: typeof components.BaseRouterView;
     VarFadeRouterView: typeof components.FadeRouterView;
     VarFadeSlideRouterView: typeof components.FadeSlideRouterView;
+    VarSlideRouterView: typeof components.SlideRouterView;
   }
 }
 

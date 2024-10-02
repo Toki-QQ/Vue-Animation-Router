@@ -1,10 +1,10 @@
 import { withInstall } from "@/utils/view/component";
 
-import { FadeSlideRouterView } from "./FadeSlideRouterView";
+import { SlideRouterView } from "./SlideRouterView";
 
-// 注册FadeSlideRouterView组件
-// install FadeSlideRouterView
-export const VarFadeSlideRouterView = withInstall(FadeSlideRouterView);
+// 注册SlideRouterView组件
+// install SlideRouterView
+export const VarSlideRouterView = withInstall(SlideRouterView);
 
-export default VarFadeSlideRouterView;
-export * from "./FadeSlideRouterView";
+export default VarSlideRouterView;
+export * from "./SlideRouterView";

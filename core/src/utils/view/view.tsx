@@ -142,10 +142,6 @@ export const defineAnimationRouterView = (
 
       // 监听路由返回事件
       // listening router back event
-      eventBus.on(RouterEvents.ROUTER_REPLACE, () => {
-        animationName.value = BACK_ANIMATION_NAME;
-      });
-
       eventBus.on(RouterEvents.ROUTER_BACK, () => {
         animationName.value = BACK_ANIMATION_NAME;
         console.log("event back");
@@ -153,10 +149,6 @@ export const defineAnimationRouterView = (
 
       // 监听路由前进事件
       // listening router forward event
-      eventBus.on(RouterEvents.ROUTER_PUSH, () => {
-        animationName.value = FORWARD_ANIMATION_NAME;
-      });
-
       eventBus.on(RouterEvents.ROUTER_FORWARD, () => {
         animationName.value = FORWARD_ANIMATION_NAME;
 
@@ -166,10 +158,10 @@ export const defineAnimationRouterView = (
       // 组件卸载时，移除监听
       // when component unmounted, remove the event listener
       onUnmounted(() => {
-        eventBus.off(RouterEvents.ROUTER_REPLACE);
         eventBus.off(RouterEvents.ROUTER_BACK);
-        eventBus.off(RouterEvents.ROUTER_PUSH);
         eventBus.off(RouterEvents.ROUTER_FORWARD);
+
+        clearInterval(progressInterval);
       });
 
       // 渲染动画路由视图方法

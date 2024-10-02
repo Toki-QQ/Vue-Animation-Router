@@ -31,7 +31,7 @@ export function getComponentClass(config: DefineAnimationRouterViewParams) {
 
 /**
  * 根据动画配置生成动画样式
- * build animation style by animation config
+ * set animation style by animation config
  * @param animationConfig Ref<AnimationConfigurations | undefined>
  * @returns Object
  */

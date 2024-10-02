@@ -9,6 +9,7 @@
   "types": "es/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:modules": "rimraf ./node_modules",
     "clean:lib": "rimraf ./lib",
     "clean:es": "rimraf ./es",
     "clean:dist": "rimraf ./dist",

@@ -1,0 +1,62 @@
+/**
+ * 滑动动画路由视图
+ * slide animation router view class
+ */
+.--VAR-slide-router-view {
+  --back-leave-animation: slide-back-leave-animation;
+  --back-enter-animation: slide-back-enter-animation;
+  --forward-leave-animation: slide-forward-leave-animation;
+  --forward-enter-animation: slide-forward-enter-animation;
+}
+
+/**
+ * 返回操作时候，离开视图的动画
+ * the animation of leaving router view's back operation here
+ */
+@keyframes slide-back-leave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/**
+ * 返回操作时候，进入视图的动画
+ * the animation of entering router view's back operation here
+ */
+@keyframes slide-back-enter-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/**
+ * 返回操作时候，离开视图的动画
+ * the animation of leaving router view's forward operation here
+ */
+@keyframes slide-forward-leave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/**
+ * 返回操作时候，离开视图的动画
+ * the animation of entering router view's forward operation here
+ */
+@keyframes slide-forward-enter-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

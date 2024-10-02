@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "bootstrap": "pnpm install",
+    "clean:modules": "rimraf ./node_modules",
     "dev": "vite",
     "prebuild": "rimraf dist",
     "build": "vite build",

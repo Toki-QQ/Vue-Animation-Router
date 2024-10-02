@@ -4,26 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reinstall": "pnpm clean:modules && pnpm clean:modules:core && pnpm clean:modules:demo && pnpm clean:modules:site && pnpm install",
+    "clean:modules": "rimraf ./node_modules",
+    "clean:modules:core": "pnpm -F vue-animation-router clean:modules",
+    "clean:modules:demo": "pnpm -F vue-animation-router-demo clean:modules",
+    "clean:modules:site": "pnpm -F vue-animation-router-site clean:modules",
+    "core:build": "pnpm -F vue-animation-router build",
+    "demo:dev": "pnpm -F vue-animation-router-demo dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@types/node": "^20.13.0",
-    "@typescript-eslint/eslint-plugin": "^7.11.0",
-    "@typescript-eslint/parser": "^7.11.0",
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@types/node": "^20.16.3",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "cz-conventional-changelog-zh": "^0.0.2",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-vue": "^9.26.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.7",
-    "typescript": "^5.4.5"
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-vue": "^9.27.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
+    "typescript": "^5.5.4"
   }
 }

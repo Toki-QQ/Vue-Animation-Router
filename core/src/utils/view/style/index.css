@@ -4,6 +4,7 @@
  */
 .--VAR-animation-router-view-container {
   position: relative;
+  transition: all;
 }
 
 /**

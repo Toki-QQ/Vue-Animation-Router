@@ -12,17 +12,18 @@
     "commit": "git add . && git cz"
   },
   "dependencies": {
-    "@icon-park/vue-next": "^1.4.2",
+    "@primevue/themes": "^4.0.7",
     "@vueuse/core": "^9.13.0",
     "@vueuse/head": "^1.3.1",
-    "ant-design-vue": "^3.2.20",
     "axios": "^1.7.2",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.0.7",
     "vue": "^3.4.27",
+    "vue-animation-router": "workspace:1.0.0",
     "vue-dompurify-html": "^3.1.2",
-    "vue-router": "^4.3.2",
-    "vue-animation-router": "workspace:1.0.0"
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

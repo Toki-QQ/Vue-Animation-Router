@@ -3,13 +3,13 @@
     <div
       class="h-full flex flex-col justify-center items-center gap-10 border rounded-md"
     >
-      <div class="text-2xl text-gray-300">Hello, I am base demo 1</div>
+      <div class="text-2xl text-gray-300">Hello, I am fade slide demo 1</div>
 
-      <div class="text-5xl font-extrabold text-gray-500">Base Demo 1</div>
+      <div class="text-5xl font-extrabold text-gray-500">Fade slide Demo 1</div>
 
       <Button
         icon="pi pi-arrow-right"
-        label="navigate to base demo 2"
+        label="navigate to fade slide demo 2"
         @click="navToDemo2"
       />
     </div>
@@ -21,7 +21,7 @@ const router = useRouter();
 
 function navToDemo2() {
   router.push({
-    name: "BaseDemo2",
+    name: "FadeSlideDemo2",
   });
 }
 </script>

@@ -3,12 +3,11 @@ import Vue from "@vitejs/plugin-vue";
 import VueJsx from "@vitejs/plugin-vue-jsx";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
-import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
+import { PrimeVueResolver } from "unplugin-vue-components/resolvers";
 import { resolve } from "path";
 import { loadEnv } from "vite";
 import { wrapperEnv } from "./build/util";
 import { OUTPUT_DIR } from "./build/constant";
-import os from "os";
 
 //获取文件真实路径
 function pathResolve(dir: string) {
@@ -39,7 +38,7 @@ export default defineConfig(({ mode }) => {
       VueJsx(),
       Components({
         dts: "src/components.d.ts",
-        resolvers: [AntDesignVueResolver()],
+        resolvers: [PrimeVueResolver()],
       }),
       AutoImport({
         imports: [
@@ -56,6 +55,7 @@ export default defineConfig(({ mode }) => {
         },
         dts: "src/auto-imports.d.ts",
         vueTemplate: true,
+        resolvers: [PrimeVueResolver()],
       }),
     ],
     css: {

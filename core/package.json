@@ -35,6 +35,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@icon-park/vue-next": "^1.4.2",
     "mitt": "^3.0.1",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"

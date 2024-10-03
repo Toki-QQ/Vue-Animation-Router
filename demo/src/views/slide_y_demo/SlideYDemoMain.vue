@@ -1,5 +1,5 @@
 <template>
-  <VarSlideRouterView
+  <VarSlideYRouterView
     class="w-full h-full"
     :animation="{
       backEnterDuration: 1,
@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { VarSlideRouterView } from "vue-animation-router/es";
+import { VarSlideYRouterView } from "vue-animation-router/es";
 </script>
 
 <style scoped></style>

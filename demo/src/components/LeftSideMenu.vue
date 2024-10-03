@@ -48,9 +48,19 @@ const items = ref([
         route: "/slide_demo/demo_1",
       },
       {
+        label: "SlideY",
+        icon: "pi pi-arrow-right",
+        route: "/slide_y_demo/demo_1",
+      },
+      {
         label: "FadeSlide",
         icon: "pi pi-arrow-right",
         route: "/fade_slide_demo/demo_1",
+      },
+      {
+        label: "FadeSlideY",
+        icon: "pi pi-arrow-right",
+        route: "/fade_slide_y_demo/demo_1",
       },
     ],
   },

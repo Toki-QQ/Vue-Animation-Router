@@ -1,6 +1,6 @@
 import type { RouteRecordRaw } from "vue-router";
 
-// 基础demo路由
+// 滑动demo路由
 // slide demo route
 export const SlideDemoRoute: RouteRecordRaw = {
   path: "/slide_demo",

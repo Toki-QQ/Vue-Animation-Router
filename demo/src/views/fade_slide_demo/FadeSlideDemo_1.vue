@@ -5,11 +5,11 @@
     >
       <div class="text-2xl text-gray-300">Hello, I am fade slide demo 1</div>
 
-      <div class="text-5xl font-extrabold text-gray-500">Fade slide Demo 1</div>
+      <div class="text-5xl font-extrabold text-gray-500">FADE SLIDE DEMO 1</div>
 
       <Button
         icon="pi pi-arrow-right"
-        label="navigate to fade slide demo 2"
+        label="Navigate To Fade Slide Demo 2"
         @click="navToDemo2"
       />
     </div>

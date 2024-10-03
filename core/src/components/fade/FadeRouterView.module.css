@@ -3,32 +3,19 @@
  * fade animation router view class
  */
 .--VAR-fade-router-view {
-  --back-leave-animation: fade-back-animation;
-  --back-enter-animation: fade-back-animation;
-  --back-leave-animation-reverse: reserve;
-  --forward-leave-animation: fade-forward-animation;
-  --forward-enter-animation: fade-forward-animation;
+  --back-leave-animation: fade-animation;
+  --back-enter-animation: fade-animation;
+  --back-enter-animation-reverse: reserve;
+  --forward-leave-animation: fade-animation;
+  --forward-enter-animation: fade-animation;
   --forward-enter-animation-reverse: reserve;
 }
 
 /**
  * 返回操作时候的视图动画
- * the animation of router view's back operation here
+ * the animation of router view's operation
  */
-@keyframes fade-back-animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/**
- * 前进操作时候的视图动画
- * the animation of router view's forward operation here
- */
-@keyframes fade-forward-animation {
+@keyframes fade-animation {
   0% {
     opacity: 1;
   }

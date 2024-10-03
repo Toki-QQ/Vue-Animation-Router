@@ -14,7 +14,7 @@
       <!-- 路由内容 -->
       <!-- router view -->
       <div class="flex-1 h-full overflow-hidden">
-        <RouterView />
+        <VarFadeRouterView class="w-full h-full" />
       </div>
     </div>
   </div>
@@ -23,6 +23,7 @@
 <script lang="ts" setup="setup">
 import PanelMenu from "@/components/PanelMenu.vue";
 import LeftSideMenu from "@/components/LeftSideMenu.vue";
+import { VarFadeRouterView } from "vue-animation-router/es";
 </script>
 
 <style scoped></style>

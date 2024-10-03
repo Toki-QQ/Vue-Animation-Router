@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from "vue-router";
 
-// 基础demo路由
-// slide demo route
+// 淡化滑动demo路由
+// fade slide demo route
 export const FadeSlideDemoRoute: RouteRecordRaw = {
   path: "/fade_slide_demo",
   component: () => import("@/views/fade_slide_demo/FadeSlideDemoMain.vue"),

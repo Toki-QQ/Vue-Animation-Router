@@ -2,10 +2,12 @@ import type { RouteRecordRaw } from "vue-router";
 import { createWebHistory } from "vue-router";
 import { createAnimationRouter } from "vue-animation-router/es";
 
-import { BaseDemoRoute } from "./Base";
-import { FadeDemoRoute } from "./Fade";
-import { SlideDemoRoute } from "./Slide";
-import { FadeSlideDemoRoute } from "./FadeSlide";
+import { BaseDemoRoute } from "./demo_routes/Base";
+import { FadeDemoRoute } from "./demo_routes/Fade";
+import { SlideDemoRoute } from "./demo_routes/Slide";
+import { SlideYDemoRoute } from "./demo_routes/SlideY";
+import { FadeSlideDemoRoute } from "./demo_routes/FadeSlide";
+import { FadeSlideYDemoRoute } from "./demo_routes/FadeSlideY";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -16,7 +18,9 @@ const routes: Array<RouteRecordRaw> = [
   BaseDemoRoute,
   FadeDemoRoute,
   SlideDemoRoute,
+  SlideYDemoRoute,
   FadeSlideDemoRoute,
+  FadeSlideYDemoRoute,
 ];
 
 export const router = createAnimationRouter({

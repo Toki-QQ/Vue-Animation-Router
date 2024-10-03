@@ -5,7 +5,10 @@ import {
   ref,
   toRef,
   watchEffect,
+  onMounted,
   onUnmounted,
+  onActivated,
+  onDeactivated,
 } from "vue";
 import { RouterView } from "vue-router";
 
@@ -85,8 +88,55 @@ export const defineAnimationRouterView = (
       let animationStepCount = 0; // 动画进度 animation progress
       let progressInterval: NodeJS.Timeout | undefined = undefined; // 动画进度定时器 animation progress timer
 
-      // 触发动画开始事件，准备动画进度所需数据
-      // trigger the animation start emit, prepare the progress data
+      onMounted(() => {
+        setEventBusListeners();
+      });
+
+      onUnmounted(() => {
+        removeEventBusListeners();
+        clearInterval(progressInterval);
+      });
+
+      onActivated(() => {
+        setEventBusListeners();
+      });
+
+      onDeactivated(() => {
+        removeEventBusListeners();
+      });
+
+      /**
+       * 设置事件监听
+       * set the event listener
+       */
+      const setEventBusListeners = () => {
+        // 监听路由返回事件
+        // listening router back event
+        eventBus.on(RouterEvents.ROUTER_BACK, () => {
+          animationName.value = BACK_ANIMATION_NAME;
+        });
+
+        // 监听路由前进事件
+        // listening router forward event
+        eventBus.on(RouterEvents.ROUTER_FORWARD, () => {
+          animationName.value = FORWARD_ANIMATION_NAME;
+        });
+      };
+
+      /**
+       * 移除事件监听
+       * remove the event listener
+       */
+      const removeEventBusListeners = () => {
+        eventBus.off(RouterEvents.ROUTER_BACK);
+        eventBus.off(RouterEvents.ROUTER_FORWARD);
+      };
+
+      /**
+       * 触发动画开始事件，准备动画进度所需数据
+       * trigger the animation start emit, prepare the progress data
+       * @param active enter | leave | appear
+       */
       const prepareProgressInterval = (
         active: "enter" | "leave" | "appear",
       ) => {
@@ -102,8 +152,11 @@ export const defineAnimationRouterView = (
         });
       };
 
-      // 开始触发动画进度事件
-      // trigger the animation progress emit
+      /**
+       * 开始触发动画进度事件
+       * trigger the animation progress emit
+       * @param active enter | leave | appear
+       */
       const startProgressInterval = (active: "enter" | "leave" | "appear") => {
         if (animationStepCount != 0) {
           animationStepCount = 0;
@@ -128,8 +181,11 @@ export const defineAnimationRouterView = (
         );
       };
 
-      // 结束触发动画结束事件，清除动画进度定时器
-      // trigger the animation finish emit, clear animation progress timer
+      /**
+       * 结束触发动画结束事件，清除动画进度定时器
+       * trigger the animation finish emit, clear animation progress timer
+       * @param active enter | leave | appear
+       */
       const clearProgressInterval = (active: "enter" | "leave" | "appear") => {
         clearInterval(progressInterval);
 
@@ -140,32 +196,11 @@ export const defineAnimationRouterView = (
         });
       };
 
-      // 监听路由返回事件
-      // listening router back event
-      eventBus.on(RouterEvents.ROUTER_BACK, () => {
-        animationName.value = BACK_ANIMATION_NAME;
-        console.log("event back");
-      });
-
-      // 监听路由前进事件
-      // listening router forward event
-      eventBus.on(RouterEvents.ROUTER_FORWARD, () => {
-        animationName.value = FORWARD_ANIMATION_NAME;
-
-        console.log("event forward");
-      });
-
-      // 组件卸载时，移除监听
-      // when component unmounted, remove the event listener
-      onUnmounted(() => {
-        eventBus.off(RouterEvents.ROUTER_BACK);
-        eventBus.off(RouterEvents.ROUTER_FORWARD);
-
-        clearInterval(progressInterval);
-      });
-
-      // 渲染动画路由视图方法
-      // animation router view render method
+      /**
+       * 渲染动画路由视图方法
+       * animation router view render method
+       * @returns {() => JSX.Element}
+       */
       const renderAnimationRouterView = () => (
         <div class="--VAR-animation-router-view-container">
           <RouterView

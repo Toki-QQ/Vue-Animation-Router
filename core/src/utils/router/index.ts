@@ -52,7 +52,7 @@ const createAnimationRouter = (routerOptions: RouterOptions): Router => {
 
   // 创建用于监听路由变化的守卫
   // create guard to listen route change
-  router.beforeEach((to, from) => {
+  router.beforeEach(() => {
     let emitName = RouterEvents.ROUTER_FORWARD;
 
     // 判断当前位置是否小于历史记录的位置，如果是则说明是后退操作

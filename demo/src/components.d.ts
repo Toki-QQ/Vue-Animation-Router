@@ -9,6 +9,8 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('primevue/button')['default']
     Card: typeof import('primevue/card')['default']
+    Demo: typeof import('./components/Demo.vue')['default']
+    DemoView: typeof import('./components/DemoView.vue')['default']
     LeftSideMenu: typeof import('./components/LeftSideMenu.vue')['default']
     MegaMenu: typeof import('primevue/megamenu')['default']
     Menu: typeof import('primevue/menu')['default']

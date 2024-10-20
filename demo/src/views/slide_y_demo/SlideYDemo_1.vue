@@ -1,25 +1,19 @@
 <template>
-  <div class="w-full h-full">
-    <div
-      class="h-full flex flex-col justify-center items-center gap-10 border rounded-md"
-    >
-      <div class="text-2xl text-gray-300">Hello, I am slide y demo 1</div>
-
-      <div class="text-5xl font-extrabold text-gray-500">SLIDE Y DEMO 1</div>
-
-      <Button
-        icon="pi pi-arrow-down"
-        label="Navigate To Slide Y Demo 2"
-        @click="navToDemo2"
-      />
-    </div>
-  </div>
+  <DemoView
+    type="from"
+    title="SLIDE Y DEMO 1"
+    sub-title="Hello, I am slide y demo 1."
+    button-label="Navigate To Slide Y Demo 2"
+    :button-click-event="navTo"
+  />
 </template>
 
 <script setup lang="ts">
+import DemoView from "@/components/DemoView.vue";
+
 const router = useRouter();
 
-function navToDemo2() {
+function navTo() {
   router.push({
     name: "SlideYDemo2",
   });

@@ -2,8 +2,8 @@ packages:
   # project core
   - "core"
 
-  # project website
-  - "site"
+  # project docs
+  - "docs"
 
   # project demo
   - "demo"

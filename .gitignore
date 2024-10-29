@@ -8,8 +8,8 @@ lerna-debug.log*
 .pnpm-debug.log*
 
 # VitePress
-site/.vitepress/dist
-site/.vitepress/cache
+docs/.vitepress/dist
+docs/.vitepress/cache
 
 # Core dist
 core/lib

@@ -1,7 +1,7 @@
 {
   "name": "vue-animation-router",
   "version": "1.0.0",
-  "description": "",
+  "description": "Make router views switch lively.",
   "type": "module",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -32,8 +32,8 @@
     "RouterView",
     "vue3"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Toki",
+  "license": "MIT",
   "dependencies": {
     "@icon-park/vue-next": "^1.4.2",
     "mitt": "^3.0.1",

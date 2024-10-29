@@ -1,6 +1,8 @@
 {
   "name": "vue-animation-router-demo",
   "version": "0.0.1",
+  "author": "Toki",
+  "license": "MIT",
   "scripts": {
     "bootstrap": "pnpm install",
     "clean:modules": "rimraf ./node_modules",

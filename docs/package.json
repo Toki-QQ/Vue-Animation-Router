@@ -11,8 +11,8 @@
     "docs:preview": "vitepress preview"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Toki",
+  "license": "MIT",
   "devDependencies": {
     "vitepress": "^1.2.2"
   }

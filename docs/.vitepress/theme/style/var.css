@@ -44,3 +44,9 @@
   --vp-c-text-code: #c0cec0;
   --vp-c-text-dark-2: rgba(235, 235, 235, 0.6);
 }
+
+img[src$=".gif"] {
+  border-radius: 6px;
+  overflow: hidden;
+  clip-path: inset(1px);
+}

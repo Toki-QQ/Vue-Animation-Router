@@ -23,19 +23,31 @@
         </a>
       </template>
       <template #end>
-        <Button
-          icon="pi pi-github"
-          label="Star"
-          aria-label="Github"
-          @click="onGithubClick"
-        />
+        <div class="flex items-center gap-4">
+          <Button
+            :icon="`pi ${appStore.getTheme === 'light' ? 'pi-sun' : 'pi-moon'}`"
+            aria-label="Theme"
+            @click="onThemeClick"
+          />
+
+          <Button
+            icon="pi pi-github"
+            label="Star"
+            aria-label="Github"
+            @click="onGithubClick"
+          />
+        </div>
       </template>
     </MegaMenu>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { useAppStore } from "@/store/App";
+
 const router = useRouter();
+
+const appStore = useAppStore();
 
 // 顶部菜单项
 // Menu items
@@ -64,6 +76,15 @@ function onDemoClick() {
  */
 function onDocsClick() {
   console.log("onDocsClick");
+}
+
+/**
+ * 切换主题
+ * toggle theme
+ */
+function onThemeClick() {
+  document.documentElement.classList.toggle("dark");
+  appStore.switchTheme();
 }
 
 /**

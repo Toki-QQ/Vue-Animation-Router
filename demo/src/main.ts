@@ -7,7 +7,8 @@ import PrimeVue from "primevue/config";
 import "primeicons/primeicons.css";
 import Aura from "@primevue/themes/aura";
 
-//代替v-html
+// 代替v-html
+// replace v-html with VueDOMPurifyHTML
 import VueDOMPurifyHTML from "vue-dompurify-html";
 
 import App from "./App.vue";
@@ -24,6 +25,10 @@ app.use(VueDOMPurifyHTML);
 app.use(PrimeVue, {
   theme: {
     preset: Aura,
+    options: {
+      darkModeSelector: ".dark",
+    },
   },
 });
+
 app.mount("#app");

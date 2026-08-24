@@ -43,8 +43,8 @@ const props = withDefaults(
 // computed buttonIcon
 const getButtonIcon = computed(() => {
   return (): string => {
-    if (props.buttonIcons) {
-      return props.buttonIcons;
+    if (props.buttonIcon) {
+      return props.buttonIcon;
     }
 
     if (props.type === "to") {

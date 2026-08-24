@@ -10,9 +10,9 @@
     "clean:modules:core": "pnpm -F vue-animation-router clean:modules",
     "clean:modules:demo": "pnpm -F vue-animation-router-demo clean:modules",
     "clean:modules:docs": "pnpm -F vue-animation-router-docs clean:modules",
-    "core:build": "pnpm -F vue-animation-router build",
-    "demo:dev": "pnpm -F vue-animation-router-demo dev",
-    "docs:dev": "pnpm -F vue-animation-router-docs docs:dev"
+    "build:core": "pnpm -F vue-animation-router build",
+    "dev:demo": "pnpm -F vue-animation-router-demo dev",
+    "dev:docs": "pnpm -F vue-animation-router-docs docs:dev"
   },
   "keywords": [
     "vue-animation-router",

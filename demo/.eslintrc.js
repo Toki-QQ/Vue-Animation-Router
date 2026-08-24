@@ -25,6 +25,12 @@ module.exports = {
   ],
   rules: {
     "@typescript-eslint/consistent-type-imports": "error",
+    "vue/multi-word-component-names": [
+      "error",
+      {
+        ignores: ["index"],
+      },
+    ],
   },
   globals: {
     defineProps: "readonly",

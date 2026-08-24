@@ -1,27 +1,27 @@
-# 开始 {#getting-started}
+# Get started {#getting-started}
 
-## 安装 {#install}
+## Install {#install}
 
-选择一款你常用的包管理器来安装 `vue-animation-router`：
+Select a package manager to install `vue-animation-router` with:
 
 ```bash
-# 使用 pnpm
+# Use pnpm
 pnpm add vue-animation-router
 
-# 或者使用 yarn
+# Use yarn
 yarn add vue-animation-router
 
-# 或者使用 npm
+# Use npm
 npm install vue-animation-router
 ```
 
-:::warning 提示
-如果你的应用使用的 Vue 版本低于 3.0，你需要将 Vue 版本升级到 3.x 后，才能使用。（其实按理 Vue 2.x 也是支持的，但我没使用过 Vue 2.x 进行测试。）
+:::warning Tip
+If your application uses a Vue version is below 3.0, you need to upgrade Vue to Vue 3.x. (Actually Vue 2.x is also supported, but I haven't tested Vue 2.x.)
 :::
 
-## 创建路由 {#create-router}
+## Create router {#create-router}
 
-在 `src/router` 目录下的 `index.ts` 文件，添加如下内容：
+In the `src/router` directory, add the following content to the `index.ts` file:
 
 ```ts {2,15-18}
 import { createWebHistory } from "vue-router";
@@ -44,13 +44,13 @@ export const router = createAnimationRouter({
 });
 ```
 
-## 引入动画路由视图 {#import-router-view}
+## Import animation router view {#import-router-view}
 
-支持通过三种方式来引入动画路由视图，你可以选择以下任意一种你喜欢的引入方式。
+Supports three ways to import animation router view, you can choose any of them.
 
-### 完整引入 {#full-import}
+### Full import {#full-import}
 
-在 `src/main.ts` 文件，添加如下内容：
+In the `src/main.ts` file, add the following content:
 
 ```ts {3,10}
 import { createApp } from "vue";
@@ -67,9 +67,9 @@ app.use(VueAnimationRouter);
 app.mount("#app");
 ```
 
-### 全局按需引入 {#global-import}
+### Global import {#global-import}
 
-在 `src/main.ts` 文件，添加如下内容：
+In the `src/main.ts` file, add the following content:
 
 ```ts {3,10}
 import { createApp } from "vue";
@@ -86,7 +86,7 @@ app.use(VarFadeRouterView);
 app.mount("#app");
 ```
 
-然后就可以在任意需要使用到路由视图 `<RouterView />` 的 `.vue` 文件中使用了：
+Now you can use the animation router view in any `.vue` file:
 
 ```vue {2}
 <template>
@@ -96,9 +96,9 @@ app.mount("#app");
 <style scoped></style>
 ```
 
-### 手动按需引入 {#manual-import}
+### Manual import {#manual-import}
 
-在任意需要使用到路由视图 `<RouterView />` 的 `.vue` 文件，添加如下内容：
+In any `.vue` file, add the following content:
 
 ```vue {2,6}
 <template>
@@ -112,7 +112,7 @@ import { VarFadeRouterView } from "vue-animation-router/es";
 <style scoped></style>
 ```
 
-如果你使用的是非setup语法，请使用如下方式注册动画路由视图：
+If you use non-setup syntax, please register the animation router view as follows:
 
 ```vue {2,7,10-12}
 <template>
@@ -134,7 +134,7 @@ export default defineComponent({
 </script>
 ```
 
-## 开始使用​ {#start-use}
+## Start use {#start-use}
 
-现在你可以启动项目了。对于动画路由视图的配置选项，请查阅[动画路由组件—配置选项](/animation-router-views/)。
-对于动画路由视图的运行效果，请查阅[对应的独立文档](/animation-router-views/base.html)。
+Now you can start the project. For configuration options of animation router view, please refer to [animation router view configuration](/animation-router-views/)。
+For running effect of animation router view, please refer to [animation router view running effect](/animation-router-views/base.html)。

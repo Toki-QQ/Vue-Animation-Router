@@ -10,3 +10,6 @@ packages:
 
   # exclude packages that are inside test directories
   - "!**/test/**"
+allowBuilds:
+  esbuild: false
+  vue-demi: false

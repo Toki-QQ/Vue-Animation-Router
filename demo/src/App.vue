@@ -1,5 +1,8 @@
 <template>
-  <div class="w-screen h-screen p-4 flex flex-col gap-4">
+  <div
+    class="w-screen h-screen p-4 flex flex-col gap-4 dark:bg-gray-800"
+    :class="{ dark: appStore.getTheme === 'dark' }"
+  >
     <!-- 顶部菜单 -->
     <!-- panel menu -->
     <PanelMenu />
@@ -23,7 +26,12 @@
 <script lang="ts" setup="setup">
 import PanelMenu from "@/components/PanelMenu.vue";
 import LeftSideMenu from "@/components/LeftSideMenu.vue";
+
 import { VarFadeRouterView } from "vue-animation-router/es";
+
+import { useAppStore } from "@/store/App";
+
+const appStore = useAppStore();
 </script>
 
 <style scoped></style>

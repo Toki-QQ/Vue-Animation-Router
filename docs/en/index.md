@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /markdown-examples
+      link: /en/introduction
     - theme: alt
       text: View Demo
-      link: /api-examples
+      link: /en/api-examples
 
 features:
   - title: Lively Router

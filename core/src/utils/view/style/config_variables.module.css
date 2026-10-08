@@ -1,0 +1,52 @@
+/**
+ * 动画配置变量
+ * animation variables
+ */
+.--VAR-animation-router-view-config {
+  /**
+   * 返回操作动画
+   * animation variables of back operation 
+   */
+  --back-enter-animation: none;
+  --back-enter-animation-duration: 0.5s;
+  --back-enter-animation-delay: 0s;
+  --back-enter-animation-position: relative;
+  --back-enter-animation-reverse: normal;
+
+  --back-leave-animation: none;
+  --back-leave-animation-duration: 0.5s;
+  --back-leave-animation-delay: 0s;
+  --back-leave-animation-position: absolute;
+  --back-leave-animation-reverse: normal;
+
+  /**
+   * 前进操作动画
+   * animation variables of forward operation 
+   */
+  --forward-enter-animation: none;
+  --forward-enter-animation-duration: 0.5s;
+  --forward-enter-animation-delay: 0s;
+  --forward-enter-animation-position: relative;
+  --forward-enter-animation-reverse: normal;
+
+  --forward-leave-animation: none;
+  --forward-leave-animation-duration: 0.5s;
+  --forward-leave-animation-delay: 0s;
+  --forward-leave-animation-position: absolute;
+  --forward-leave-animation-reverse: normal;
+
+  /**
+   * 动画曲线/速率
+   */
+  --back-enter-animation-timing-function: linear;
+  --back-leave-animation-timing-function: linear;
+  --forward-enter-animation-timing-function: linear;
+  --forward-leave-animation-timing-function: linear;
+
+  /**
+   * 其他配置
+   * other variables
+   */
+  --back-animation-transform-origin: center;
+  --forward-animation-transform-origin: center;
+}

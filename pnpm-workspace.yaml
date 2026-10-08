@@ -1,0 +1,15 @@
+packages:
+  # project core
+  - "core"
+
+  # project docs
+  - "docs"
+
+  # project demo
+  - "demo"
+
+  # exclude packages that are inside test directories
+  - "!**/test/**"
+allowBuilds:
+  esbuild: false
+  vue-demi: false

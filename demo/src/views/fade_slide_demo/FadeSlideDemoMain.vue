@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { VarFadeSlideRouterView } from "vue-animation-router/es";
+import { VarFadeSlideRouterView } from "vue-animation-router/dist/es";
 </script>
 
 <style scoped></style>

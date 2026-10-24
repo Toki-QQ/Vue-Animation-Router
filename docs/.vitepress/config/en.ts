@@ -24,8 +24,11 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     },
 
     nav: [
-      { text: "Guide", link: "/getting-started" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Guide", link: "/en/introduction" },
+      {
+        text: "Demo",
+        link: "https://toki-qq.github.io/Vue-Animation-Router-Demo/",
+      },
     ],
 
     sidebar: {
@@ -35,11 +38,11 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
           items: [
             {
               text: "What is it?",
-              link: "/en/introduction.html",
+              link: "/en/introduction",
             },
             {
               text: "Get started",
-              link: "/en/getting-started.html",
+              link: "/en/getting-started",
             },
           ],
         },
@@ -49,21 +52,29 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             { text: "Component API", link: "/en/animation-router-views/" },
             {
               text: "Basic (No animation)",
-              link: "/en/animation-router-views/base.html",
+              link: "/en/animation-router-views/base",
             },
-            { text: "Fade", link: "/en/animation-router-views/fade.html" },
-            { text: "Slide", link: "/en/animation-router-views/slide.html" },
+            { text: "Fade", link: "/en/animation-router-views/fade" },
+            { text: "Slide", link: "/en/animation-router-views/slide" },
             {
               text: "Slide (Vertical)",
-              link: "/en/animation-router-views/slide-y.html",
+              link: "/en/animation-router-views/slide-y",
             },
             {
               text: "Fade Slide",
-              link: "/en/animation-router-views/fade-slide.html",
+              link: "/en/animation-router-views/fade-slide",
             },
             {
               text: "Fade Slide (Vertical)",
-              link: "/en/animation-router-views/fade-slide-y.html",
+              link: "/en/animation-router-views/fade-slide-y",
+            },
+            {
+              text: "Zoom In",
+              link: "/en/animation-router-views/zoom-in",
+            },
+            {
+              text: "Zoom Out",
+              link: "/en/animation-router-views/zoom-out",
             },
           ],
         },

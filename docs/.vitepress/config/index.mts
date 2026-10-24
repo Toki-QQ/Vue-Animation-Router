@@ -5,7 +5,7 @@ import { zhConfig } from "./zh";
 
 export default defineConfig({
   ...sharedConfig,
-
+  base: "/Vue-Animation-Router/",
   locales: {
     root: {
       label: "简体中文",

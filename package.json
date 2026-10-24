@@ -4,15 +4,17 @@
   "description": "Make router views switch lively.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "reinstall": "pnpm clean:modules:core && pnpm clean:modules:demo && pnpm clean:modules:docs && pnpm clean:modules && pnpm install",
     "clean:modules": "rimraf ./node_modules",
     "clean:modules:core": "pnpm -F vue-animation-router clean:modules",
     "clean:modules:demo": "pnpm -F vue-animation-router-demo clean:modules",
     "clean:modules:docs": "pnpm -F vue-animation-router-docs clean:modules",
     "build:core": "pnpm -F vue-animation-router build",
+    "build:demo": "pnpm -F vue-animation-router-demo build",
+    "build:demo:umd": "pnpm -F vue-animation-router-demo build-umd",
+    "build:docs": "pnpm -F vue-animation-router-docs build",
     "dev:demo": "pnpm -F vue-animation-router-demo dev",
-    "dev:docs": "pnpm -F vue-animation-router-docs docs:dev"
+    "dev:docs": "pnpm -F vue-animation-router-docs dev"
   },
   "keywords": [
     "vue-animation-router",

@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /introduction
+      link: /getting-started
     - theme: alt
       text: 查看演示样例
-      link: /api-examples
+      link: https://toki-qq.github.io/Vue-Animation-Router-Demo/
 
 features:
   - title: 灵动路由

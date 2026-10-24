@@ -1,34 +1,45 @@
-import { defineConfig } from "vite";
+import { resolve } from "path";
+import { loadEnv, defineConfig } from "vite";
+
 import Vue from "@vitejs/plugin-vue";
 import VueJsx from "@vitejs/plugin-vue-jsx";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import { PrimeVueResolver } from "unplugin-vue-components/resolvers";
-import { resolve } from "path";
-import { loadEnv } from "vite";
+import { createHtmlPlugin } from "vite-plugin-html";
+
 import { wrapperEnv } from "./build/util";
 import { OUTPUT_DIR } from "./build/constant";
 
-//获取文件真实路径
+/**
+ * 获取文件真实路径
+ * get the real path of the file
+ */
 function pathResolve(dir: string) {
   return resolve(process.cwd(), ".", dir);
 }
 
-// vite配置 参考文档：https://vitejs.dev/config/
+/**
+ * Vite配置
+ * Vite configuration
+ * Reference: https://vitejs.dev/config/
+ */
 export default defineConfig(({ mode }) => {
   const root = process.cwd();
   const env = loadEnv(mode, root);
   const { VITE_DROP_CONSOLE } = wrapperEnv(env);
+
   return {
+    base: "./",
     resolve: {
       alias: [
-        /* {
-          find: /\/#\//,
-          replacement: pathResolve("types") + "/",
-        }, */
         {
           find: "@",
           replacement: pathResolve("src") + "/",
+        },
+        {
+          find: "@public",
+          replacement: pathResolve("public") + "/",
         },
       ],
       dedupe: ["vue"],
@@ -41,21 +52,21 @@ export default defineConfig(({ mode }) => {
         resolvers: [PrimeVueResolver()],
       }),
       AutoImport({
-        imports: [
-          "vue",
-          "vue-router",
-          // 'vue-i18n',
-          "@vueuse/head",
-          "@vueuse/core",
-        ],
+        imports: ["vue", "vue-router", "@vueuse/head", "@vueuse/core"],
         eslintrc: {
-          enabled: true, // Default `false`
-          filepath: "./.eslintrc-auto-import.json", // Default `./.eslintrc-auto-import.json`
-          globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+          enabled: true,
+          filepath: "./.eslintrc-auto-import.json",
+          globalsPropValue: true,
         },
         dts: "src/auto-imports.d.ts",
         vueTemplate: true,
-        resolvers: [PrimeVueResolver()],
+      }),
+      createHtmlPlugin({
+        inject: {
+          data: {
+            isUMD: mode === "build-umd",
+          },
+        },
       }),
     ],
     css: {

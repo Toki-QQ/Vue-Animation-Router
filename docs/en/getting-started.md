@@ -136,5 +136,5 @@ export default defineComponent({
 
 ## Start use {#start-use}
 
-Now you can start the project. For configuration options of animation router view, please refer to [animation router view configuration](/animation-router-views/)。
-For running effect of animation router view, please refer to [animation router view running effect](/animation-router-views/base.html)。
+Now you can start the project. For configuration options of animation router view, please refer to [animation router view configuration](/en/animation-router-views/)。
+For running effect of animation router view, please refer to [animation router view running effect](/en/animation-router-views/base.html)。

@@ -8,6 +8,8 @@ declare module "@vue/runtime-core" {
     VarSlideYRouterView: typeof components.SlideYRouterView;
     VarFadeSlideRouterView: typeof components.FadeSlideRouterView;
     VarFadeSlideYRouterView: typeof components.FadeSlideYRouterView;
+    VarZoomInRouterView: typeof components.ZoomInRouterView;
+    VarZoomOutRouterView: typeof components.ZoomOutRouterView;
   }
 }
 

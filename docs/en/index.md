@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "Vue Animation Router"
-  text: "Make router views switch lively."
+  text: "Make router view transitions more lively."
   tagline: Lively, Smoothly<br>Customized, Easy to Use.
   image:
     src: /favicon.svg
@@ -11,13 +11,13 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /en/introduction
+      link: /en/getting-started
     - theme: alt
       text: View Demo
-      link: /en/api-examples
+      link: https://toki-qq.github.io/Vue-Animation-Router-Demo/
 
 features:
-  - title: Lively Router
+  - title: Lively Animation
     details: Add transition animations to the router views in your Vue.js project to make the switch between views smoother.
     icon: ✨
   - title: Visually Appealing

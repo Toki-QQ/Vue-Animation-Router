@@ -1,11 +1,13 @@
 <template>
   <div class="w-full h-full">
     <div
-      class="h-full flex flex-col justify-center items-center gap-10 border rounded-md bg-gray-100 dark:bg-gray-950 overflow-hidden"
+      class="h-full p-4 flex flex-col justify-center items-center gap-10 border rounded-md bg-gray-100 dark:bg-gray-950 overflow-hidden"
     >
-      <div class="text-2xl text-gray-400">{{ props.subTitle }}</div>
+      <div class="text-center text-2xl text-gray-400">{{ props.subTitle }}</div>
 
-      <div class="text-5xl font-extrabold text-gray-700">{{ props.title }}</div>
+      <div class="text-center text-5xl font-extrabold text-gray-700">
+        {{ props.title }}
+      </div>
 
       <Button
         :icon="getButtonIcon()"
@@ -13,7 +15,7 @@
         @click="props.buttonClickEvent"
       />
 
-      <div class="text-gray-400">{{ props.description }}</div>
+      <div class="text-center text-gray-400">{{ props.description }}</div>
     </div>
   </div>
 </template>

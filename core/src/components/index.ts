@@ -4,3 +4,5 @@ export * from "./slide";
 export * from "./slide_y";
 export * from "./fade_slide";
 export * from "./fade_slide_y";
+export * from "./zoom_in";
+export * from "./zoom_out";

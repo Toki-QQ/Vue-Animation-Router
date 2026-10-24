@@ -4,7 +4,7 @@ import { defineAnimationRouterView } from "@/utils/view";
 // import CSS
 import SlideYRouterViewClass from "./SlideYRouterView.module.css";
 
-// 创建淡化滑动动画路由
+// 创建滑动（纵向）动画路由
 // define slide y router view
 const SlideYRouterView = defineAnimationRouterView({
   name: "SlideYRouterView",

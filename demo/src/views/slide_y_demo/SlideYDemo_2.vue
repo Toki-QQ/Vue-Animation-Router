@@ -1,7 +1,7 @@
 <template>
   <DemoView
     type="to"
-    title="SLIDE DEMO 2"
+    title="SLIDE Y DEMO 2"
     sub-title="Hello, I am slide y demo 2."
     button-label="Back To Slide Y Demo 1"
     :button-click-event="backTo"

@@ -24,8 +24,11 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     },
 
     nav: [
-      { text: "指南", link: "/getting-started" },
-      { text: "演示样例", link: "/markdown-examples" },
+      { text: "指南", link: "/introduction" },
+      {
+        text: "演示样例",
+        link: "https://toki-qq.github.io/Vue-Animation-Router-Demo/",
+      },
     ],
 
     sidebar: {
@@ -35,11 +38,11 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
           items: [
             {
               text: "这是什么？",
-              link: "/introduction.html",
+              link: "/introduction",
             },
             {
               text: "开始",
-              link: "/getting-started.html",
+              link: "/getting-started",
             },
           ],
         },
@@ -49,21 +52,29 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             { text: "组件API", link: "/animation-router-views/" },
             {
               text: "基础（无动画）",
-              link: "/animation-router-views/base.html",
+              link: "/animation-router-views/base",
             },
-            { text: "淡化", link: "/animation-router-views/fade.html" },
-            { text: "滑动", link: "/animation-router-views/slide.html" },
+            { text: "淡化", link: "/animation-router-views/fade" },
+            { text: "滑动", link: "/animation-router-views/slide" },
             {
               text: "滑动（纵向）",
-              link: "/animation-router-views/slide-y.html",
+              link: "/animation-router-views/slide-y",
             },
             {
               text: "淡化滑动",
-              link: "/animation-router-views/fade-slide.html",
+              link: "/animation-router-views/fade-slide",
             },
             {
               text: "淡化滑动（纵向）",
-              link: "/animation-router-views/fade-slide-y.html",
+              link: "/animation-router-views/fade-slide-y",
+            },
+            {
+              text: "缩放放大",
+              link: "/animation-router-views/zoom-in",
+            },
+            {
+              text: "缩放缩小",
+              link: "/animation-router-views/zoom-out",
             },
           ],
         },

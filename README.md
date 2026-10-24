@@ -10,7 +10,7 @@
 <h3 align="center" style="font-style: italic;">Make router view transitions more lively.</h3>
 
 <div align="center" style="margin: 40px;">
-<p>English &nbsp; | &nbsp; <a href="./README_zh-CN.md">简体中文</a></p>
+<p>English &nbsp; | &nbsp; <a href="./README-zh_CN.md">简体中文</a></p>
 </div>
 
 <div align="center" style="margin: 40px; display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 12px;">

@@ -20,7 +20,7 @@ core/dist
 demo/dist
 
 # pnpm
-pnpm-lock.yaml
+# pnpm-lock.yaml
 
 # Trae
 .trae/

@@ -1,0 +1,70 @@
+/**
+ * 缩放放大动画路由视图
+ * zoom in animation router view class
+ */
+.--VAR-zoom-in-router-view {
+  --back-leave-animation: zoom-in-back-leave-animation;
+  --back-enter-animation: zoom-in-back-enter-animation;
+  --forward-leave-animation: zoom-in-forward-leave-animation;
+  --forward-enter-animation: zoom-in-forward-enter-animation;
+}
+
+/**
+ * 返回操作时候，离开视图的动画
+ * the animation of leaving router view's back operation here
+ */
+@keyframes zoom-in-back-leave-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/**
+ * 返回操作时候，进入视图的动画
+ * the animation of entering router view's back operation here
+ */
+@keyframes zoom-in-back-enter-animation {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/**
+ * 返回操作时候，离开视图的动画
+ * the animation of leaving router view's forward operation here
+ */
+@keyframes zoom-in-forward-leave-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/**
+ * 返回操作时候，离开视图的动画
+ * the animation of entering router view's forward operation here
+ */
+@keyframes zoom-in-forward-enter-animation {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

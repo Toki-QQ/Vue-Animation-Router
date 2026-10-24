@@ -1,21 +1,82 @@
 {
   "name": "vue-animation-router",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Make router views switch lively.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf ./dist",
+    "build:prod": "vite build",
+    "build:lib": "vite build -c ./vite.lib.config.ts",
+    "build": "pnpm run clean & pnpm run build:prod & pnpm run build:lib"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.mjs",
+  "types": "./dist/lib/index.d.ts",
+  "unpkg": "./dist/lib/index.umd.js",
+  "jsdelivr": "./dist/lib/index.umd.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/cjs/index.js"
+    },
+    "./dist/es": "./dist/es/index.mjs",
+    "./dist/es/*": "./dist/es/*",
+    "./dist/lib": "./dist/lib/vue-animation-router.js",
+    "./dist/lib/*": "./dist/lib/*",
+    "./dist/cjs": "./dist/cjs/index.js",
+    "./dist/cjs/*": "./dist/cjs/*",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.less"
+  ],
+  "keywords": [
+    "vue-animation-router",
+    "vue",
+    "vue-router",
+    "animation",
+    "router",
+    "animation-router",
+    "router-animation",
+    "router-view",
+    "RouterView",
+    "vue3"
+  ],
+  "author": "Toki",
+  "license": "MIT",
   "dependencies": {
     "mitt": "^3.0.1",
     "vue": "^3.2.45",
-    "vue-dompurify-html": "^3.1.2",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.13.0",
+    "@types/rollup": "^0.54.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/babel-plugin-jsx": "^1.2.2",
+    "@vue/runtime-core": "^3.4.27",
+    "glob": "^13.0.6",
+    "rollup": "^4.18.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "ts-node": "^10.9.2",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-lib-inject-css": "^2.2.2",
     "vue-demi": "^0.13.11",
     "vue-tsc": "^1.0.24"
   }

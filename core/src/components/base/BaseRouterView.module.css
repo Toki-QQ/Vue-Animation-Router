@@ -1,0 +1,32 @@
+/**
+ * 动画视图组件的类
+ * animation router view class
+ */
+.--VAR-base-router-view {
+  /**
+    * 在此配置CSS变量，具体参考src/utils/view/style/config_variables.module.css
+    * set CSS variables here, see src/utils/view/style/config_variables.module.css
+    */
+  --back-enter-animation: base-back-animation;
+  --back-enter-animation-duration: 0s;
+  --back-leave-animation: base-back-animation;
+  --back-leave-animation-duration: 0s;
+  --forward-enter-animation: base-forward-animation;
+  --forward-enter-animation-duration: 0s;
+  --forward-leave-animation: base-forward-animation;
+  --forward-leave-animation-duration: 0s;
+}
+
+/**
+ * 编写返回操作时候的视图动画
+ * code the animation of router view's back operation here
+ */
+@keyframes base-back-animation {
+}
+
+/**
+ * 编写前进操作时候的视图动画
+ * code the animation of router view's forward operation here
+ */
+@keyframes base-forward-animation {
+}

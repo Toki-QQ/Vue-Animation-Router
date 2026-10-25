@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { VarZoomInRouterView } from "vue-animation-router/dist/es";
+import { VarZoomInRouterView } from "vue-animation-router/es";
 </script>
 
 <style scoped></style>

@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { VarSlideRouterView } from "vue-animation-router/dist/es";
+import { VarSlideRouterView } from "vue-animation-router/es";
 </script>
 
 <style scoped></style>

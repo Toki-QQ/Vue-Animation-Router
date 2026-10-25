@@ -1,6 +1,6 @@
 import type { RouteRecordRaw } from "vue-router";
 import { createWebHashHistory } from "vue-router";
-import { createAnimationRouter } from "vue-animation-router/dist/es";
+import { createAnimationRouter } from "vue-animation-router/es";
 
 import { BaseDemoRoute } from "./demo_routes/Base";
 import { FadeDemoRoute } from "./demo_routes/Fade";

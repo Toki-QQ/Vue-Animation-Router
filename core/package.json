@@ -1,7 +1,7 @@
 {
   "name": "vue-animation-router",
-  "version": "1.0.0",
-  "description": "Make router views switch lively.",
+  "version": "1.0.1",
+  "description": "Make router view transitions more lively.",
   "scripts": {
     "clean": "rimraf ./dist && rimraf ./es && rimraf ./lib",
     "build:prod": "vite build",

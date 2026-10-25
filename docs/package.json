@@ -1,7 +1,7 @@
 {
   "name": "vue-animation-router-docs",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Vue Animation Router Documentation",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev",

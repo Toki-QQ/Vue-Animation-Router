@@ -3,32 +3,35 @@
   "version": "1.0.0",
   "description": "Make router views switch lively.",
   "scripts": {
-    "clean": "rimraf ./dist",
+    "clean": "rimraf ./dist && rimraf ./es && rimraf ./lib",
     "build:prod": "vite build",
     "build:lib": "vite build -c ./vite.lib.config.ts",
     "build": "pnpm run clean & pnpm run build:prod & pnpm run build:lib"
   },
   "type": "module",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/es/index.mjs",
-  "types": "./dist/lib/index.d.ts",
-  "unpkg": "./dist/lib/index.umd.js",
-  "jsdelivr": "./dist/lib/index.umd.js",
+  "main": "./lib/index.js",
+  "module": "./es/index.mjs",
+  "types": "./es/index.d.ts",
+  "unpkg": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
   "files": [
-    "dist"
+    "es/**/*",
+    "lib/**/*",
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
   ],
   "exports": {
     ".": {
-      "types": "./dist/lib/index.d.ts",
-      "import": "./dist/es/index.mjs",
-      "require": "./dist/cjs/index.js"
+      "types": "./es/index.d.ts",
+      "import": "./es/index.mjs",
+      "require": "./lib/index.js"
     },
-    "./dist/es": "./dist/es/index.mjs",
-    "./dist/es/*": "./dist/es/*",
-    "./dist/lib": "./dist/lib/vue-animation-router.js",
-    "./dist/lib/*": "./dist/lib/*",
-    "./dist/cjs": "./dist/cjs/index.js",
-    "./dist/cjs/*": "./dist/cjs/*",
+    "./es": "./es/index.mjs",
+    "./es/*": "./es/*",
+    "./lib": "./lib/index.js",
+    "./lib/*": "./lib/*",
+    "./dist": "./dist/*",
     "./package.json": "./package.json"
   },
   "sideEffects": [

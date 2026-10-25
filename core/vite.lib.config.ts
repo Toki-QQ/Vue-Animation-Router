@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import VueJsx from "@vitejs/plugin-vue-jsx";
 
-import { OUTPUT_DIR_LIB } from "./build/constant";
+import { OUTPUT_DIR_DIST } from "./build/constant";
 
 /**
  * 获取文件真实路径
@@ -18,7 +18,7 @@ export function pathResolve(dir: string) {
 export default defineConfig({
   build: {
     target: "es2015",
-    outDir: OUTPUT_DIR_LIB,
+    outDir: OUTPUT_DIR_DIST,
     emptyOutDir: true,
     cssCodeSplit: false,
     cssMinify: true,

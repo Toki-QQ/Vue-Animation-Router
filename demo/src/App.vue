@@ -27,7 +27,7 @@
 import PanelMenu from "@/components/PanelMenu.vue";
 import SideMenu from "@/components/SideMenu.vue";
 
-import { VarFadeRouterView } from "vue-animation-router/dist/es";
+import { VarFadeRouterView } from "vue-animation-router/es";
 
 import { useAppStore } from "@/store/App";
 import { useDeviceStore } from "@/store/Device";

@@ -115,7 +115,7 @@ export default defineConfig(({ mode }) => {
       VueJsx(),
       Dts({
         entryRoot: "./src",
-        outDir: [pathResolve("dist/es"), pathResolve("dist/cjs")],
+        outDir: [pathResolve(OUTPUT_DIR_ES), pathResolve(OUTPUT_DIR_CJS)],
         tsconfigPath: "./tsconfig.json",
       }),
     ],

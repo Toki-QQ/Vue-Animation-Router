@@ -1,7 +1,7 @@
 {
   "name": "vue-animation-router-project",
-  "version": "1.0.0",
-  "description": "Make router views switch lively.",
+  "version": "1.0.1",
+  "description": "Make router view transitions more lively.",
   "main": "index.js",
   "scripts": {
     "reinstall": "pnpm clean:modules:core && pnpm clean:modules:demo && pnpm clean:modules:docs && pnpm clean:modules && pnpm install",
